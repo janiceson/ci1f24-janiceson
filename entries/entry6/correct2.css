@@ -1,0 +1,113 @@
+/* General body styling */
+@font-face {
+    font-family: "BebasNeue"; /* This is an arbitrary name -- */
+    src: url("/fonts/BebasNeue-Regular.ttf") format("woff2");
+}
+.video-container {
+    max-width: 100%;
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c9ffc7; /* Light green background for success */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    color: #0b5a2c;
+    border-radius: 15px;
+    font-family: BebasNeue;
+    text-align: center;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+header h1 {
+    font-size: 100px;
+    margin: 0;
+    padding: 0%;
+}
+
+/* Main content section */
+main {
+    width: 100%;
+    font-family: BebasNeue;
+ 
+    text-align: center;
+    padding: 30px;
+    margin-top: 20px;
+}
+.lyrics{
+    text-align: left;
+    margin: 40px;
+    font-size: 30px;
+    color: #003f16;
+    
+}
+.lyrics:hover{
+    background-color: #00ff595e;
+}
+section p {
+    font-size: 50px;
+    color: #333;
+    margin: 10px 0;
+    align-items: center;
+}
+
+section strong {
+    color: #00c04d;
+    font-size: 50px;
+}
+
+/* Play Again button/link */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0b5a2c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 80px;
+    cursor: pointer;
+    text-align: center;
+}
+audio{
+    margin-top: 30px;
+}
+
+a:hover {
+    background-color: #003216;
+}
+
+/* Footer styling */
+
+
+footer p {
+    margin: 0;
+}

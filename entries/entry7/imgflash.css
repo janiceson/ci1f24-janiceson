@@ -1,0 +1,84 @@
+@font-face {
+    font-family: "JollyLodger"; /* This is an arbitrary name -- */
+    src: url("/fonts/JollyLodger-Regular.ttf") format("woff2");
+}
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.back-button:hover {
+    background-color: #5e0000;
+}
+/* Full-screen body styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: "JollyLodger";
+
+    background-color: black;
+}
+
+
+/* Flashing text styling */
+/* Flashing text styling */
+.flashing-text {
+    font-size: 25vw; /* Increased initial size */
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-weight: bold;
+    line-height: 0.85; /* Tighter line-height to maximize vertical space */
+    animation: flash 0.3s infinite; /* Reduced duration for faster flash */
+}
+
+/* Flash animation */
+@keyframes flash {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* Media Queries */
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .flashing-text {
+        font-size: 22vw; /* Adjusted font size for large screens */
+    }
+}
+
+/* Medium screens */
+@media (max-width: 1200px) {
+    .flashing-text {
+        font-size: 25vw; /* Adjusted font size for medium screens */
+    }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+    .flashing-text {
+        font-size: 30vw; /* Adjusted font size for smaller screens */
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .flashing-text {
+        font-size: 35vw; /* Adjusted font size for extra small screens */
+    }
+}

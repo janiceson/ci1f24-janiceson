@@ -1,0 +1,97 @@
+/* General body styling */
+@font-face {
+    font-family: "BebasNeue"; /* This is an arbitrary name -- */
+    src: url("/fonts/BebasNeue-Regular.ttf") format("woff2");
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #870000; /* Light green background for success */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 4px 10px rgb(0, 0, 0);
+    color: #220000;
+    border-radius: 15px;
+    font-family: BebasNeue;
+    text-align: center;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+header h1 {
+    font-size: 100px;
+    margin: 0;
+    padding: 0%;
+}
+
+/* Main content section */
+main {
+    width: 100%;
+    font-family: BebasNeue;
+ 
+    text-align: center;
+    padding: 30px;
+    margin-top: 20px;
+}
+.lyrics{
+    text-align: left;
+    margin: 40px;
+    font-size: 30px;
+    color: #000000;
+    
+}
+.lyrics:hover{
+    background-color: #ff0d0038;
+}
+section p {
+    font-size: 50px;
+    color: #330000;
+    margin: 10px 0;
+    align-items: center;
+}
+
+section strong {
+    color: #c00000;
+    font-size: 50px;
+}
+
+/* Play Again button/link */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ffefef;
+    box-shadow: 0px 4px 10px rgb(0, 0, 0);
+    color: rgb(82, 0, 0);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 80px;
+    cursor: pointer;
+    text-align: center;
+}
+audio{
+    margin-top: 30px;
+}
+
+a:hover {
+    background-color: #003216;
+}
+
+/* Footer styling */
+
+
+footer p {
+    margin: 0;
+}

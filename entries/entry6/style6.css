@@ -1,0 +1,196 @@
+/* General body styling */
+@font-face {
+    font-family: "BebasNeue"; /* Custom font */
+    src: url("/fonts/BebasNeue-Regular.ttf") format("woff2");
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff3c0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+form {
+    margin: 10px;
+    font-size: 50px;
+}
+
+/* Header styling */
+header {
+    text-align: left;
+    background-color: #92c6ff;
+    color: white;
+    font-family: BebasNeue;
+    padding: 20px;
+    width: 40%;
+    border-radius: 25px;
+    width: 200px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 18px;
+}
+
+/* Label styling */
+label {
+    margin-top: 20px;
+    font-size: 18px;
+    display: block;
+}
+
+/* Audio styling */
+audio {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 400px; /* Ensure audio adjusts with screen */
+}
+
+/* Main content styling */
+main {
+    text-align: center;
+}
+
+/* Radio button general styles */
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Styling the correct answer radio button */
+input[type="radio"][value="correct song title"] + label {
+    color: green;
+    font-weight: bold;
+}
+
+label {
+    font-size: 25px;
+    padding-left: 0%;
+    font-family: BebasNeue;
+    margin-bottom: 0px;
+}
+
+/* Styling the wrong answer radio button */
+input[type="radio"][value="wrong song title"] + label {
+    color: red;
+    font-weight: normal;
+    font-size: 50px;
+}
+
+/* Button styling */
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #92c6ff;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-color: #92c6ff;
+    border-radius: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: BebasNeue;
+    margin-top: 0%;
+}
+
+button[type="submit"]:hover {
+    background-color: #ffffff;
+    color: #fff3c0;
+}
+
+/* Footer styling */
+footer p {
+    margin: 0px;
+}
+
+/* Media Queries */
+
+/* For tablets and small desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+    body {
+        padding: 0 20px;
+        background-color: rgb(208, 233, 255);
+    }
+
+    header {
+        width: 50%; /* Adjust header width for tablets */
+        background-color: #ffc0de;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    form {
+        font-size: 40px;
+    }
+
+    button[type="submit"] {
+        font-size: 25px;
+        padding: 8px 18px;
+        background-color: #ffc0de;
+    }
+}
+
+/* For large smartphones and portrait tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        width: 60%; /* Adjust header width for large smartphones */
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    form {
+        font-size: 35px;
+    }
+
+    body{
+        background-color: rgb(209, 237, 211);
+    }
+
+    button[type="submit"] {
+        font-size: 22px;
+        padding: 7px 15px;
+    }
+
+    audio {
+        max-width: 350px;
+    }
+}
+
+/* For small smartphones (max-width: 480px) */
+@media (max-width: 480px) {
+    header {
+        width: 70%; /* Adjust header width for small smartphones */
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    form {
+        font-size: 30px;
+    }
+
+    button[type="submit"] {
+        font-size: 20px;
+        padding: 6px 12px;
+        
+    }
+
+    audio {
+        max-width: 280px;
+    }
+}
+
