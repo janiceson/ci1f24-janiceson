@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.scroll-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.scroll-row {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+    flex: 1;
+}
+
+.scroll-content {
+    display: flex;
+    gap: 50px; /* Space between words or images */
+    animation: scroll 20s linear infinite;
+}
+
+.scroll-row.right-to-left .scroll-content {
+    animation: scroll-reverse 40s linear infinite;
+}
+
+.scroll-text {
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.scroll-image {
+    width: 150px; /* Adjust image width */
+    height: 150px; /* Adjust image height */
+    object-fit: cover;
+}
+
+/* Keyframes for left-to-right scrolling */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Keyframes for right-to-left scrolling */
+@keyframes scroll-reverse {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+
+
+
+
