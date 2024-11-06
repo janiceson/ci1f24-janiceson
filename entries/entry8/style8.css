@@ -1,16 +1,16 @@
 @font-face {
-    font-family: "ModakReg"; /* This is an arbitrary name -- */
+    font-family: "ModakReg"; 
     src: url("/fonts/Modak-Regular.ttf") format("woff2");
 }
 body {
     display: flex;
-    flex-direction: column; /* Arrange elements in a column */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #FFF8E1; /* Soft pastel background */
+    background-color: #FFF8E1; 
     margin: 0;
-    gap: 20px; /* Space between rows */
+    gap: 20px;
     flex-wrap: wrap;
 }
 * {
@@ -22,11 +22,11 @@ body {
     width: 100%;
     background-color: #c3995abe;
     color: #FFF8E1;
-    text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1); /* Fixed syntax: added 'px' */
+    text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1); 
     text-align: center;
     font-family: "ModakReg";
-    padding: 10px 0; /* Increased padding for a bigger banner */
-    font-size: 35px; /* Increased font size */
+    padding: 10px 0; 
+    font-size: 35px;
     font-weight: bold;
     overflow: hidden;
     white-space: nowrap;
@@ -50,70 +50,70 @@ body {
     }
 }
 body {
-    margin-top: 80px; /* Adjust to account for the fixed banner height */
+    margin-top: 80px; 
 }
 
 .image-row {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 20px; /* Space between images */
+    gap: 20px; 
 }
 
 .top-row {
-    margin-bottom: 20px; /* Space between the top row and the bottom row */
+    margin-bottom: 20px; 
 }
 
 img {
-    width: 120px; /* Default size for all images */
+    width: 120px; 
     height: auto;
     margin: 10px;
 }
 
 .back-to-home {
     position: fixed;
-    bottom: 15px; /* Distance from the bottom of the viewport */
+    bottom: 15px; 
     left: 50%;
     transform: translateX(-50%);
 }
 
 
 .back-to-home:hover {
-    color: #FF69B4; /* Bright pink on hover */
+    color: #FF69B4;
 }
 
 .home-icon {
     width: 60px;
     height: 40px;
     margin-right: 10px;
-    margin-top: 0px; /* Adjusted from 50px to 30px to raise the arrow */
+    margin-top: 0px; 
 }
 
 
-/* Media Query for Smaller Screens */
+
 @media (max-width: 600px) {
     img {
-        width: 90px; /* Make images smaller on small screens */
+        width: 90px; 
     }
     .back-to-home {
-        font-size: 12px; /* Reduce font size */
+        font-size: 12px; 
     }
     .home-icon {
-        width: 40px; /* Reduce home icon size */
+        width: 40px; 
         height: 30px;
     }
 }
 
-/* Media Query for Larger Screens */
+
 @media (min-width: 1200px) {
     img {
-        width: 180px; /* Make images larger on large screens */
+        width: 180px; 
     }
     .back-to-home {
-        font-size: 16px; /* Increase font size */
+        font-size: 16px; 
     }
     .home-icon {
-        width: 80px; /* Increase home icon size */
+        width: 80px;
         height: 60px;
     }
 }
