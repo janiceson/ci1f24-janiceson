@@ -1,40 +1,122 @@
+@font-face {
+    font-family: "ModakReg"; /* This is an arbitrary name -- */
+    src: url("/fonts/Modak-Regular.ttf") format("woff2");
+}
 body {
     display: flex;
+    flex-direction: column; /* Arrange elements in a column */
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: #FFF8E1; /* Soft pastel background */
     margin: 0;
+    gap: 20px; /* Space between rows */
     flex-wrap: wrap;
-    gap: 20px;
 }
-img {
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+.banner {
+    width: 100%;
+    background-color: #c3995abe;
+    color: #FFF8E1;
+    text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1); /* Fixed syntax: added 'px' */
+    text-align: center;
+    font-family: "ModakReg";
+    padding: 10px 0; /* Increased padding for a bigger banner */
+    font-size: 35px; /* Increased font size */
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.scrolling-text {
+    display: inline-block;
+    animation: scroll 10s linear infinite;
+}
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+body {
+    margin-top: 80px; /* Adjust to account for the fixed banner height */
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between images */
+}
+
+.top-row {
+    margin-bottom: 20px; /* Space between the top row and the bottom row */
+}
+
 img {
     width: 120px; /* Default size for all images */
     height: auto;
     margin: 10px;
 }
+
 .back-to-home {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    color: #555;
-    font-size: 14px;
-    margin-bottom: 20px;
-    transition: color 0.3s;
+    position: fixed;
+    bottom: 15px; /* Distance from the bottom of the viewport */
+    left: 50%;
+    transform: translateX(-50%);
 }
+
+
 .back-to-home:hover {
     color: #FF69B4; /* Bright pink on hover */
 }
+
 .home-icon {
     width: 60px;
     height: 40px;
-    margin-right: 0px;
-    margin-top: 50px;
     margin-right: 10px;
+    margin-top: 0px; /* Adjusted from 50px to 30px to raise the arrow */
 }
+
+
+/* Media Query for Smaller Screens */
+@media (max-width: 600px) {
+    img {
+        width: 90px; /* Make images smaller on small screens */
+    }
+    .back-to-home {
+        font-size: 12px; /* Reduce font size */
+    }
+    .home-icon {
+        width: 40px; /* Reduce home icon size */
+        height: 30px;
+    }
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 1200px) {
+    img {
+        width: 180px; /* Make images larger on large screens */
+    }
+    .back-to-home {
+        font-size: 16px; /* Increase font size */
+    }
+    .home-icon {
+        width: 80px; /* Increase home icon size */
+        height: 60px;
+    }
+}
+
+
 

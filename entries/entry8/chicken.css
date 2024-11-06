@@ -1,0 +1,167 @@
+@font-face {
+    font-family: "BebasNeue"; /* This is an arbitrary name -- */
+    src: url("/fonts/BebasNeue-Regular.ttf") format("woff2");
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.quiz {
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    background-color: rgba(158, 226, 255, 0.8);
+    color: rgb(25, 70, 39);
+    padding: 15px;
+    border-radius: 5px;
+    font-family: "BebasNeue";
+    font-size: 20px;
+}
+
+.quiz p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(6, 92, 45);
+    border-radius: 0px;
+    font-family: "BebasNeue";
+    color: rgb(168, 224, 255);
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FFF8E1;
+    margin: 0;
+    overflow: hidden; /* Hide any overflow from the body */
+}
+
+.garden-container {
+    position: relative;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Crop elements that move outside of the container */
+}
+
+.garden-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+    display: block;
+}
+
+.icon {
+    position: absolute;
+    width: 150px; /* Size relative to viewport width */
+    height: 150px;
+    transition: transform 0.3s;
+}
+
+.icon:hover {
+    transform: scale(1.5); /* Magnify the icon on hover */
+}
+        
+        /* Example positions for the icons */
+        .icon1 { top: 30%; left: 30%; }
+        .icon2 { top: 30%; left: 60%; }
+        .icon3 { top: 30%; left: 50%; }
+        .icon4 { top: 45%; left: 20%; }
+        .icon5 { top: 25%; left: 18%; }
+        .icon6 { top: 62%; left: 72%; }
+        .icon7 { top: 16%; left: 56%; }
+        .icon8 { top: 60%; left: 16%; }
+        .icon9 { top: 32%; left: 6%; }
+        .icon10 { top: 40%; left: 1%; }
+        .icon11 { top: 42%; left: 58%; }
+        .icon12 { top: 32%; left: 40%; }
+        .icon13 { top: 35%; left: 25%; }
+        .icon14 { top: 32%; left: 6%; }
+    
+/* Media Query for Smaller Screens (max-width: 600px) */
+/* Media Query for Smaller Screens (max-width: 600px) */
+@media (max-width: 600px) {
+    /* Keyframes for the vibrating animation */
+    @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        25% { transform: translateX(-5px); }
+        50% { transform: translateX(5px); }
+        75% { transform: translateX(-5px); }
+    }
+
+    .icon {
+        width: 90px; /* Make icons smaller */
+        height: 90px;
+        animation: shake 0.2s infinite; /* Reduce the duration to 0.2s for a quicker shake */
+        transition: none; /* Remove the hover transition */
+    }
+
+    .icon:hover {
+        transform: none; /* Disable the hover effect */
+    }
+
+    /* Adjusted positions for smaller screens */
+    .icon1 { top: 35%; left: 80%; }
+    .icon2 { top: 30%; left: 70%; }
+    .icon3 { top: 30%; left: 55%; }
+    .icon4 { top: 40%; left: 60%; }
+    .icon5 { top: 16%; left: 70%; }
+
+    /* Hide extra icons on smaller screens */
+    .icon6, .icon7, .icon8, .icon9, .icon10, .icon11, .icon12, .icon13, .icon14 {
+        display: none;
+    }
+
+    .garden-container {
+        width: 100%; /* Make the container full width */
+    }
+}
+
+        
+        /* Media Query for Medium-Sized Screens (600px to 1200px) */
+@media (min-width: 600px) and (max-width: 1100px) {
+     /* Keyframes for the vibrating animation */
+     @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        25% { transform: translateX(-5px); }
+        50% { transform: translateX(5px); }
+        75% { transform: translateX(-5px); }
+    }
+
+    .icon {
+        width: 90px; /* Make icons smaller */
+        height: 90px;
+        animation: shake 0.2s infinite; /* Reduce the duration to 0.2s for a quicker shake */
+        transition: none; /* Remove the hover transition */
+    }
+
+    .icon:hover {
+        transform: none; /* Disable the hover effect */
+    }
+    .icon {
+        width: 140px; /* Adjust icon size for tablets */
+        height: 140px;
+    }
+    .icon1 { top: 28%; left: 35%; }
+    .icon2 { top: 28%; left: 60%; }
+    .icon3 { top: 28%; left: 50%; }
+    .icon4 { top: 31%; left: 26%; }
+    .icon5 { top: 25%; left: 18%; }
+    .icon6 { top: 62%; left: 90%; }
+    /* Hide extra icons, showing only six on medium screens */
+    .icon7, .icon8, .icon9, .icon10, .icon11, .icon12, .icon13, .icon14 {
+        display: none;
+    }
+    .garden-container {
+        max-width: 1000px; /* Adjust the container width for tablets */
+    }
+}
