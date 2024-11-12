@@ -1,0 +1,137 @@
+/* Import shared styling for a consistent base */
+@import url('style9.css');
+
+/* Large "THEORY" stamp overlay with border */
+.theory-stamp {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
+    font-size: 15rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    text-transform: uppercase;
+    pointer-events: none; /* Ensures it doesn’t interfere with other elements */
+    z-index: 10; /* Places it above all other content */
+    padding: 20px;
+    border: 6px solid rgba(255, 255, 255, 0.1); /* White border for stamp look */
+    border-radius: 5px; /* Slight rounding for an ink-stamp feel */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adds depth, making it look stamped */
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    background-color: #333;
+    padding: 30px;
+    border-radius: 8px;
+    width: 95%;
+    max-width: 900px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-left: 12px solid #ff4d4d;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Header title styling */
+header h1 {
+    font-size: 3rem;
+    color: #ff4d4d;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 70px;
+}
+
+/* Theories section styling */
+.theories {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 95%;
+    max-width: 900px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    border-left: 5px solid #ff4d4d;
+    position: relative;
+    z-index: 1;
+}
+
+/* Individual theory styling */
+.theory {
+    background-color: #333;
+    padding: 25px;
+    border-radius: 5px;
+    border-left: 4px solid #ff4d4d;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.theory-title {
+    font-size: 2.2rem;
+    color: #ff6666;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ff6666;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.2s ease;
+}
+
+/* Hover-inflate effect on titles */
+.theory-title:hover {
+    transform: scale(1.1); /* Slightly enlarges title on hover */
+}
+
+/* Glitch effect for theory titles */
+.glitch {
+    animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 2px 2px 0 #ff4d4d, -2px -2px 0 #ff4d4d; }
+    50% { text-shadow: -2px -2px 0 #ff4d4d, 2px 2px 0 #ff4d4d; }
+    100% { text-shadow: 2px -2px 0 #ff4d4d, -2px 2px 0 #ff4d4d; }
+}
+
+/* Evidence and notes sections */
+.evidence {
+    color: #ccc;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-top: 5px;
+    padding-left: 12px;
+    border-left: 2px dashed #ff4d4d;
+    transition: transform 0.2s ease;
+}
+
+/* Inflated hover effect */
+.evidence:hover,
+.notes:hover {
+    transform: scale(1.05); /* Enlarges slightly on hover */
+}
+
+/* Notes section styling */
+.notes {
+    color: #ff6666;
+    font-size: 1.1rem;
+    font-style: italic;
+    border-left: 2px solid #ff4d4d;
+    padding-left: 12px;
+    margin-top: 15px;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+/* Handwritten note effect */
+.notes::before {
+    content: '[NOTE]';
+    font-weight: bold;
+    color: #ff4d4d;
+    position: absolute;
+    top: -10px;
+    left: -40px;
+    transform: rotate(-10deg);
+    opacity: 0.7;
+}

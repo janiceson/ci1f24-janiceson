@@ -48,6 +48,41 @@ body {
     object-fit: cover;
 }
 
+/* Background scrolling text */
+.scrolling-text {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    pointer-events: none; /* Makes it non-interactive */
+    opacity: 0.05; /* Adjust opacity for subtle effect */
+    z-index: -1; /* Ensures it stays behind other elements */
+}
+
+.scrolling-text::before {
+    content: attr(class);
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff4d4d;
+    animation: scrollText 20s linear infinite;
+}
+
+/* Scrolling animation */
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 /* Keyframes for left-to-right scrolling */
 @keyframes scroll {
     from {
