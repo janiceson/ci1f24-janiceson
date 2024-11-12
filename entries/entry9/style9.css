@@ -8,31 +8,31 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     background-image: url("fadedblack.jpg");
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     color: #e0e0e0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px; /* Reduced padding */
+    padding: 40px;
 }
 
 /* Header styling */
 header {
     text-align: center;
     background-color: #333;
-    padding: 40px; /* Reduced padding */
+    padding: 40px;
     border-radius: 10px;
     width: 95%;
-    max-width: 1100px; /* Slightly smaller max width */
+    max-width: 1100px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
     border-left: 14px solid #ff4d4d;
-    margin-bottom: 35px; /* Reduced margin */
+    margin-bottom: 35px;
 }
 
 header h1 {
-    font-size: 4rem; /* Reduced font size */
+    font-size: 4rem;
     color: #ff4d4d;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -40,14 +40,14 @@ header h1 {
 }
 
 .case-id {
-    font-size: 1.3rem; /* Slightly smaller font size */
+    font-size: 1.3rem;
     color: #aaa;
     margin-top: 12px;
 }
 
 /* Navigation styling */
 .navigation {
-    margin-bottom: 25px; /* Reduced margin */
+    margin-bottom: 25px;
     width: 95%;
     max-width: 1100px;
 }
@@ -59,7 +59,7 @@ header h1 {
     background-color: #333;
     border-top: 2px solid #ff4d4d;
     border-bottom: 2px solid #ff4d4d;
-    padding: 18px 0; /* Reduced padding */
+    padding: 18px 0;
     border-radius: 10px;
 }
 
@@ -71,9 +71,9 @@ header h1 {
 .navigation a {
     color: #ff4d4d;
     text-decoration: none;
-    font-size: 1.8rem; /* Slightly smaller font size */
+    font-size: 1.8rem;
     transition: background-color 0.3s, color 0.3s;
-    padding: 12px; /* Reduced padding */
+    padding: 12px;
     display: block;
     border-radius: 6px;
 }
@@ -88,7 +88,7 @@ header h1 {
     position: relative;
     background-color: #333;
     border-radius: 10px;
-    padding: 40px; /* Reduced padding */
+    padding: 40px;
     width: 95%;
     max-width: 1100px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
@@ -103,21 +103,21 @@ header h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-25deg);
-    font-size: 5rem; /* Reduced font size */
+    font-size: 5rem;
     color: rgba(255, 255, 255, 0.1);
     font-weight: bold;
     letter-spacing: 4px;
     text-transform: uppercase;
     pointer-events: none;
     z-index: 10;
-    border: 3px solid rgba(255, 255, 255, 0.1); /* Reduced border thickness */
-    padding: 15px 30px; /* Slightly smaller padding */
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 30px;
     border-radius: 8px;
 }
 
 /* Case summary content */
 .case-summary h2 {
-    font-size: 2.5rem; /* Slightly smaller font size */
+    font-size: 2.5rem;
     color: #ff6666;
     border-bottom: 1px solid #ff6666;
     padding-bottom: 12px;
@@ -125,14 +125,14 @@ header h1 {
 }
 
 .case-summary p {
-    font-size: 1.5rem; /* Slightly smaller font size */
+    font-size: 1.5rem;
     line-height: 1.8;
 }
 
 /* Footer styling */
 footer {
     margin-top: 35px;
-    font-size: 1.2rem; /* Slightly smaller font size */
+    font-size: 1.2rem;
     color: #888;
     text-align: center;
     width: 95%;
@@ -148,7 +148,7 @@ footer {
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 8px; /* Reduced spacing between lines */
+    gap: 8px;
     pointer-events: none;
     opacity: 0.1;
     z-index: -1;
@@ -157,7 +157,7 @@ footer {
 
 /* Individual scrolling text lines */
 .scrolling-text {
-    font-size: 2.5rem; /* Reduced font size */
+    font-size: 2.5rem;
     font-weight: bold;
     color: #ff4d4d;
     white-space: nowrap;
@@ -196,3 +196,69 @@ footer {
     }
 }
 
+/* --- Media Queries --- */
+
+/* Tablet screens (up to 768px) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .case-summary h2 {
+        font-size: 2rem;
+    }
+
+    .case-summary p {
+        font-size: 1.3rem;
+    }
+
+    .navigation a {
+        font-size: 1.5rem;
+    }
+
+    .confidential-stamp {
+        font-size: 4rem;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile screens (up to 480px) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2.5rem;
+        padding: 20px;
+    }
+
+    .case-id {
+        font-size: 1rem;
+    }
+
+    .case-summary {
+        padding: 20px;
+    }
+
+    .case-summary h2 {
+        font-size: 1.8rem;
+    }
+
+    .case-summary p {
+        font-size: 1.1rem;
+    }
+
+    .navigation a {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+
+    .confidential-stamp {
+        font-size: 3.5rem;
+        padding: 10px 20px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}

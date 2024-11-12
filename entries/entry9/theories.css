@@ -9,14 +9,14 @@
     transform: translate(-50%, -50%) rotate(-15deg);
     font-size: 15rem;
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    color: rgba(255, 255, 255, 0.1);
     text-transform: uppercase;
-    pointer-events: none; /* Ensures it doesn’t interfere with other elements */
-    z-index: 10; /* Places it above all other content */
+    pointer-events: none;
+    z-index: 10;
     padding: 20px;
-    border: 6px solid rgba(255, 255, 255, 0.1); /* White border for stamp look */
-    border-radius: 5px; /* Slight rounding for an ink-stamp feel */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adds depth, making it look stamped */
+    border: 6px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Header styling */
@@ -81,7 +81,7 @@ header h1 {
 
 /* Hover-inflate effect on titles */
 .theory-title:hover {
-    transform: scale(1.1); /* Slightly enlarges title on hover */
+    transform: scale(1.1);
 }
 
 /* Glitch effect for theory titles */
@@ -109,7 +109,7 @@ header h1 {
 /* Inflated hover effect */
 .evidence:hover,
 .notes:hover {
-    transform: scale(1.05); /* Enlarges slightly on hover */
+    transform: scale(1.05);
 }
 
 /* Notes section styling */
@@ -135,3 +135,62 @@ header h1 {
     transform: rotate(-10deg);
     opacity: 0.7;
 }
+
+/* --- Media Queries --- */
+
+/* Tablet screens (up to 768px) */
+@media (max-width: 768px) {
+    .theory-stamp {
+        font-size: 10rem; /* Smaller font size for stamp */
+        padding: 15px;
+        border: 4px solid rgba(255, 255, 255, 0.1);
+    }
+
+    header h1 {
+        font-size: 2.5rem; /* Reduced font size */
+    }
+
+    .theory-title {
+        font-size: 1.8rem; /* Smaller title font size */
+    }
+
+    .evidence, .notes {
+        font-size: 1rem; /* Reduced font size */
+    }
+
+    .theories {
+        padding: 15px; /* Reduced padding */
+        gap: 30px;
+    }
+}
+
+/* Mobile screens (up to 480px) */
+@media (max-width: 480px) {
+    .theory-stamp {
+        font-size: 7rem; /* Further reduced font size for stamp */
+        padding: 10px;
+        border: 3px solid rgba(255, 255, 255, 0.1);
+    }
+
+    header h1 {
+        font-size: 2rem; /* Reduced font size for mobile */
+    }
+
+    .theory-title {
+        font-size: 1.5rem; /* Smaller title font size */
+    }
+
+    .evidence, .notes {
+        font-size: 0.9rem; /* Further reduced font size */
+    }
+
+    .theories {
+        padding: 10px; /* Smaller padding */
+        gap: 20px;
+    }
+
+    footer {
+        font-size: 0.8rem; /* Reduced font size for footer */
+    }
+}
+
