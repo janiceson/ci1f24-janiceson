@@ -1,75 +1,52 @@
-/* Default bleak mode */
+@font-face {
+  font-family: "BebasNeue"; /* Custom font */
+  src: url("/fonts/BebasNeue-Regular.ttf") format("woff2");
+}
+
 body {
-    background-color: #1c1c1c;
-    color: #f1f1f1;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    transition: background-color 0.5s, color 0.5s;
-  }
+  background-color:  black;
+}
+
+section {
+  display:  flex;
+  flex-direction:  column;
+  justify-content: center;
+  align-items:  center;
+  height:  100vh;
+}
+
+.button {
+  padding: 20px 50px;
+  border-radius: 30px;
+  background-color:  white;
+  color:  black;
+  font-size:  40px;
+  font-family: "BebasNeue";
+  text-align:  center;
+  text-align:  center;
+  transition:  all 100ms;
+}
+
+.button:hover {
+  background-color: #625c55;
+  cursor:  pointer;
+}
+
+.buttonOn {
+  background-color:  black;
+  color:  white;
   
-  .container {
-    text-align: center;
-    max-width: 600px;
-  }
-  
-  h1 {
-    font-size: 2rem;
-  }
-  
-  p {
-    font-size: 1.2rem;
-  }
-  
-  form {
-    margin-bottom: 20px;
-  }
-  
-  textarea {
-    width: 100%;
-    height: 80px;
-    padding: 10px;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  button {
-    padding: 11px 13px;
-    font-size: 1rem;
-    background-color: #444;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 2px; 
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  
-  button:hover {
-    background-color: #666;
-  }
-  
-  .buttonOn {
-    background-color: #282c31;
-    color: #fff;
-  }
-  
-  .light {
-    background-color: #ffffff;
-    color: #000;
-  }
-  
-  .hiddenMessage {
-    margin-top: 20px;
-    font-size: 1.5rem;
-  }
+  font-family: "BebasNeue";
+}
+
+.light {
+  background-image: url("bleak.jpg");
+  background-size: cover; /* Ensures the image covers the entire viewport */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling of the image */
+  height: 100vh; /* Sets the height to cover the entire viewport */
+  width: 100%; /* Ensures the width covers the full page */
+}
   
   /* Media Query for smaller devices (max-width: 480px) */
   @media (max-width: 480px) {
