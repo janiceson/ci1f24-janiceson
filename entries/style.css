@@ -1,7 +1,7 @@
 /* styles.css */
 @font-face {
     font-family: "BebasNeue"; /* Custom font */
-    src: url("/fonts/BebasNeue-Regular.ttf") format("woff2");
+    src: url("BebasNeue-Regular.ttf") format("woff2");
 }
 
 body {
