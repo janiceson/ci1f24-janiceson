@@ -1,16 +1,24 @@
-
+@font-face {
+    font-family: "BebasNeue";
+    src: url("/fonts/BebasNeue-Regular.ttf") format("woff2");
+}
 /* Base styling */
 body {
     background-color: black;
     margin: 0;
     height: 100vh;
     overflow: hidden;
+    font-family: "BebasNeue";
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
-
+h1 {
+    color: rgb(143, 143, 143);
+    font-family: "BebasNeue";
+    margin: 30px;
+}
 /* Flexbox container styling */
 .horror-container {
     display: flex;

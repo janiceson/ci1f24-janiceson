@@ -7,17 +7,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.quiz {
-    position: absolute;
-    top: 80px;
-    left: 40px;
-    background-color: rgba(158, 226, 255, 0.8);
-    color: rgb(25, 70, 39);
-    padding: 15px;
-    border-radius: 5px;
-    font-family: "BebasNeue";
-    font-size: 20px;
-}
+
 
 .quiz p {
     margin-bottom: 10px;

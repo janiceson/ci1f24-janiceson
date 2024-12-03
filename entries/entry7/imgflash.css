@@ -1,16 +1,23 @@
 @font-face {
-    font-family: "JollyLodger"; /* This is an arbitrary name -- */
-    src: url("/fonts/JollyLodger-Regular.ttf") format("woff2");
+    font-family: "BebasNeue";
+    src: url("/fonts/BebasNeue-Regular.ttf") format("woff2");
 }
 .back-button {
     display: inline-block;
     padding: 10px 20px;
+    font-family: "BebasNeue";
     margin: 20px;
     background-color: #333;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+}
+a {
+    color: rgb(115, 115, 115);
+    font-family: "BebasNeue";
+    font-size: 30px;
+    margin: 30px;
 }
 .back-button:hover {
     background-color: #5e0000;

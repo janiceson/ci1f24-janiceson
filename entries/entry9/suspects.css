@@ -1,11 +1,16 @@
+@font-face {
+    font-family: "BebasNeue"; /* Custom font */
+    src: url("/fonts/BebasNeue-Regular.ttf") format("woff2");
+}
 /* Import shared styling for base look and feel */
 @import url('style9.css');
 
 /* Body styling specific to the Suspects page */
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "BebasNeue";
     background-image: url("fadedblack.jpg");
     background-size: cover;
+    
     background-repeat: no-repeat;
     background-position: center;
     color: #e0e0e0;
@@ -13,6 +18,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 30px;
+    background-color: #1a1a1a;
 }
 
 /* Header styling */
@@ -29,11 +35,17 @@ header {
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 3.2rem;
     color: #ff4d4d;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
+a {
+    color: rgb(112, 112, 112);
+    font-weight: 500;
+    font-size: 50px;
+    margin: 20px;
+  }
 
 /* Suspects section styling */
 .suspects {
@@ -85,7 +97,7 @@ header h1 {
 }
 
 .suspect-info h2 {
-    font-size: 1.5rem;
+    font-size: 2.3rem;
     color: #ff6666;
     margin-bottom: 10px;
 }

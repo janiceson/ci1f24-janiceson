@@ -15,6 +15,9 @@
     padding-top: 20px;
     flex-wrap: wrap; 
 }
+a {
+    color: rgb(94, 64, 34);
+  }
 
 
 .tc-container, .ab-container, .third-container {

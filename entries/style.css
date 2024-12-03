@@ -1,109 +1,175 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* styles.css */
+@font-face {
+    font-family: "BebasNeue"; /* Custom font */
+    src: url("/fonts/BebasNeue-Regular.ttf") format("woff2");
 }
 
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    overflow: hidden;
-    height: 100vh;
+    background-color: #f9cdff;
+    color: #000;
+    font-family: "BebasNeue"
 }
 
-.scroll-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow: hidden;
+.poster {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 20px;
+    overflow: visible;
 }
 
-.scroll-row {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    white-space: nowrap;
-    flex: 1;
+.img1 {
+    width: 120px;  /* Vertical position */
+    height: 120px; /* Horizontal position */
 }
 
-.scroll-content {
-    display: flex;
-    gap: 50px; /* Space between words or images */
-    animation: scroll 20s linear infinite;
+.img2 {
+    width: 550px;  /* Vertical position */
+    height: 300px; /* Horizontal position */
 }
 
-.scroll-row.right-to-left .scroll-content {
-    animation: scroll-reverse 40s linear infinite;
+.img3 {
+    width: 550px;  /* Vertical position */
+    height: 300px; /* Horizontal position */
 }
 
-.scroll-text {
-    font-size: 24px;
+.img4 {
+    width: 420px;  /* Vertical position */
+    height: 310px; /* Horizontal position */
+}
+
+.img5 {
+    width: 230px;  /* Vertical position */
+    height: 220px; /* Horizontal position */
+    border-radius: 13px;
+}
+
+.img6 {
+    width: 600px;  /* Vertical position */
+    height: 380px; /* Horizontal position */
+}
+
+.img7 {
+    width: 460px;  /* Vertical position */
+    height: 310px; /* Horizontal position */
+    rotate: 270deg;
+}
+
+.img8 {
+    width: 180px;  /* Vertical position */
+    height: 180px; /* Horizontal position */
+    border-radius: 5px;
+}
+
+.img9 {
+    width: 110px;  /* Vertical position */
+    height: 110px; /* Horizontal position */
+    border-radius: 5px;
+}
+
+.img10 {
+    width: 340px;  /* Vertical position */
+    height: 240px; /* Horizontal position */
+    rotate: 270deg;
+}
+
+.img11 {
+    width: 240px;  /* Vertical position */
+    height: 175px; /* Horizontal position */
+    border-radius: 10px;
+    rotate: 90deg;
+}
+
+/* Highlight effect for corresponding text */
+.content h3 a {
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.content h3 a.highlight {
+    background-color: yellow; /* Highlight background */
+    color: black; /* Change text color for visibility */
+}
+
+
+.images {
+    position: relative;
+}
+
+.images img {
+    position: absolute;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+
+.images img {
+    position: absolute;
+    border: none;
+
+}
+
+/* Image-specific styling for varying sizes and positions */
+.img1 {top: 0px; left: 625px; }
+.img2 {top: 415px; left: -157px; }
+.img3 {top: 0px; left: 0px; }
+.img4 {top: 360px; left: 210px; }
+.img5 {top: 220px; left: 890px; }
+.img6 {top: 287px; left: 580px; }
+.img7 {top: 245px; left: 975px; }
+.img8 {top: 120px; left: 540px; }
+.img9 {top: 0px; left: 525px; }
+.img10 {top: -10px; left: 1045px; }
+.img11 {top: 25px; left: 873px; }
+
+.content{    
+    margin-top: -445px;
+    left: 745px;
+    position: relative;
+    text-align: left;
+     /* Ensures text is above images */
+}
+/* Text section styling */
+.text {
+    margin-top: 310px;
+    left: 30px;
+    position: relative;
+    text-align: left;
+     /* Ensures text is above images */
+}
+
+.text h1 {
+    font-size: 2.5rem;
     font-weight: bold;
-    white-space: nowrap;
+    color: rgb(0, 0, 169);
+    margin: 0;
+    text-transform: uppercase;
 }
 
-.scroll-image {
-    width: 150px; /* Adjust image width */
-    height: 150px; /* Adjust image height */
-    object-fit: cover;
+.text h2 {
+    font-size: 2rem;
+    color: rgb(120, 0, 172);
+    margin: 0px 0;
 }
 
-/* Background scrolling text */
-.scrolling-text {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    pointer-events: none; /* Makes it non-interactive */
-    opacity: 0.05; /* Adjust opacity for subtle effect */
-    z-index: -1; /* Ensures it stays behind other elements */
+.text p {
+    color: rgb(181, 0, 162);
+    font-size: 1rem;
+    margin: 5px 0;
 }
 
-.scrolling-text::before {
-    content: attr(class);
-    display: inline-block;
-    white-space: nowrap;
-    font-size: 3rem;
+.text a {
+    color: rgb(181, 0, 162);
+    text-decoration: none;
     font-weight: bold;
-    color: #ff4d4d;
-    animation: scrollText 20s linear infinite;
 }
 
-/* Scrolling animation */
-@keyframes scrollText {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+/* Content Section */
+.content {
+    margin-top: -445px;
+    left: 745px;
+    position: relative;
+    text-align: left;
 }
-
-/* Keyframes for left-to-right scrolling */
-@keyframes scroll {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-/* Keyframes for right-to-left scrolling */
-@keyframes scroll-reverse {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(100%);
-    }
-}
-
-
-
-
 

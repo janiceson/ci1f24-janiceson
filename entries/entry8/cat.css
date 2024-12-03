@@ -1,13 +1,63 @@
+@font-face {
+    font-family: "BebasNeue";
+    src: url("/fonts/BebasNeue-Regular.ttf") format("woff2");
+}
+
+/* Body Styling */
 body {
-    text-align: center;
-    font-family: 'Courier New', monospace;
-    background-color: #FFF8DC; /* Light, almost disorienting background */
+    font-family: "BebasNeue";
+    background-color: #FFF8DC;
     color: #333;
     padding: 20px;
     margin: 0;
-    overflow: hidden;
+    min-height: 100vh;
+    overflow: auto; /* Enable scrolling */
+    position: relative; /* Establish stacking context */
 }
 
+/* Title Styling */
+h1 {
+    text-align: center;
+    font-size: 500px; /* Increased font size */
+    color: #525252;
+    position: relative; /* Layer above scattered cats */
+    z-index: 10;
+}
+
+h3 {
+    text-align: center;
+    font-size: 300px; /* Increased font size */
+    color: #525252;
+    position: relative; /* Layer above scattered cats */
+    z-index: 10;
+}
+/* Paragraph Styling */
+p {
+    position: relative; /* Layer above scattered cats */
+    z-index: 10;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 10px;
+    background-color: #ff634762;
+    font-size: 25px;
+    text-align: center;
+    animation: fadeInOut 3s infinite; /* Fade animation */
+    
+    border-radius: 8px; /* Rounded corners for a polished look */
+    /* Subtle shadow for emphasis */
+}
+
+/* Keyframes for fade in and out */
+@keyframes fadeInOut {
+    0%, 100% { 
+        opacity: 1; 
+    }
+    50% { 
+        opacity: 0; 
+    }
+}
+
+/* Back-to-Main Link */
 .back-to-main {
     display: block;
     text-decoration: none;
@@ -18,44 +68,25 @@ body {
 }
 
 .back-to-main:hover {
-    color: #8B0000;
+    color: #525252;
 }
 
+/* Crazy Title Animation */
 .crazy-title {
     font-size: 3em;
-    color: #FF4500;
+    color: #525252;
     animation: pulseTitle 1.5s infinite alternate;
     text-transform: uppercase;
+    z-index: 10;
 }
 
+/* Pulse Animation */
 @keyframes pulseTitle {
     0% { transform: scale(1); color: #FF4500; }
     100% { transform: scale(1.1); color: #FF6347; }
 }
 
-.crazy-image-wrapper {
-    position: relative;
-    animation: shake 0.5s infinite;
-}
-
-.crazy-image {
-    width: 200px;
-    border: 5px solid #FF4500;
-    border-radius: 50%;
-    transition: transform 0.3s;
-}
-
-.crazy-image:hover {
-    transform: rotate(10deg) scale(1.2);
-}
-
-@keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-}
-
+/* Repeated Text Wrapper */
 .repeated-text-wrapper {
     overflow: hidden;
     max-height: 100px;
@@ -67,64 +98,108 @@ body {
     font-size: 1.5em;
     color: #FF6347;
     line-height: 1.2;
+    position: relative; /* Layer above scattered cats */
+    z-index: 10;
 }
 
+/* Scroll Text Animation */
 @keyframes scrollText {
     0% { transform: translateY(0); }
     100% { transform: translateY(-100%); }
 }
 
+/* Obsessive Text Styling */
 .obsessive-text {
     font-size: 1.2em;
     font-weight: bold;
-    color: #8B0000;
     margin: 20px;
-    font-family: 'Times New Roman', Times, serif;
-    text-shadow: 2px 2px 4px #FF4500;
+    color: #525252;
     animation: fadeInOut 3s infinite;
+    z-index: 10; /* Layer above scattered cats */
 }
 
-@keyframes fadeInOut {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
-}
-
+/* Obsessive Theme Styling */
 .obsessive-theme {
     font-size: 1em;
     color: #555;
     font-style: italic;
     margin-top: 30px;
-    font-family: 'Times New Roman', Times, serif;
+    z-index: 10;
+}
+
+/* Scattered Cats Container */
+.scattered-cats {
+    position: absolute;
+    width: 100%; /* Full width */
+    height: 220vh; /* Extend height for better spacing */
+    padding: 50px; /* Add padding to prevent cats from touching edges */
+    overflow: visible; /* Allow elements to overflow container */
+    z-index: 1;
+}
+/* Scattered Cat Styling */
+.scattered-cat {
+    position: absolute;
+    width: 300px !important; /* Increased size for larger cats */
+    height: auto;
+    animation: shake 0.5s infinite ease-in-out; /* Add shake animation */
+    opacity: 0.9; /* Slightly transparent */
+}
+
+
+/* Scattered Cats Positions */
+.cat1 { top: 13%; left: 0%; }
+.cat2 { top: 20%; left: 40%; }
+.cat3 { top: 30%; left: 70%; }
+.cat4 { top: 50%; left: 10%; }
+.cat5 { top: 60%; left: 50%; }
+.cat6 { top: 70%; left: 30%; }
+.cat7 { top: 80%; left: 60%; }
+.cat8 { top: 35%; left: 0%; }
+.cat9 { top: 25%; left: 20%; }
+.cat10 { top: 90%; left: 40%; }
+.cat11 { top: 0%; left: 5%; }
+.cat12 { top: 15%; left: 25%; }
+.cat13 { top: 25%; left: 50%; }
+.cat14 { top: 45%; left: 55%; }
+.cat15 { top: 55%; left: 35%; }
+.cat16 { top: 65%; left: 15%; }
+.cat17 { top: 75%; left: 45%; }
+.cat18 { top: 85%; left: 25%; }
+.cat19 { top: 80%; left: 0%; }
+.cat20 { top: 2%; left: 70%; }
+
+/* Shake Animation for Cats */
+@keyframes shake {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(-5px, 0); }
+    50% { transform: translate(5px, 0); }
+    75% { transform: translate(-5px, 0); }
 }
 
 /* Media Query for Smaller Screens */
 @media (max-width: 600px) {
     .crazy-title {
-        font-size: 2em; /* Reduce title size */
+        font-size: 2em;
     }
-    .crazy-image {
-        width: 150px; /* Make image smaller */
+    p {
+        font-size: 20px;
+        max-width: 90%; /* Adjust for smaller screens */
     }
-    .repeated-text {
-        font-size: 1.2em; /* Reduce text size */
-    }
-    .obsessive-text {
-        font-size: 1em; /* Reduce text size */
+    .scattered-cat {
+        width: 150px!; /* Smaller cats for smaller screens */
     }
 }
 
 /* Media Query for Larger Screens */
 @media (min-width: 1200px) {
     .crazy-title {
-        font-size: 4em; /* Increase title size */
+        font-size: 4em;
     }
-    .crazy-image {
-        width: 250px; /* Make image larger */
+    p {
+        font-size: 28px;
+        max-width: 600px; /* Wider text blocks for larger screens */
     }
-    .repeated-text {
-        font-size: 2em; /* Increase text size */
-    }
-    .obsessive-text {
-        font-size: 1.5em; /* Increase text size */
+    .scattered-cat {
+        width: 200px; /* Larger cats for larger screens */
     }
 }

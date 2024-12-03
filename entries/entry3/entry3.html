@@ -1,35 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My first HTML page</title>
-  <link rel="stylesheet" href="style3.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest-Style Layout</title>
+    <link rel="stylesheet" href="style3.css">
 </head>
 <body>
-    <div class="container">
-        <h1>MY PINTEREST BOARD
-            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-        </h1>
-        <section>
-            <h2>outfits
-                <br>
-                <img width="500" height="400" src="/imgs/pinterestoutfits.jpg">
-                <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;700&display=swap" rel="stylesheet">
-            <p>
-                Pinterest outfit boards are a dynamic and inspiring way to curate fashion ideas and showcase personal style. Users create boards filled with images of outfits, accessories, and styling tips, reflecting both current trends and timeless looks. One of the most exciting aspects of these boards is their ever-changing nature. Fashion is inherently fluid, influenced by seasons, cultural shifts, and emerging designers. As trends evolve, users often update their boards to incorporate new inspirations—think vibrant colors in spring or cozy layers in winter. Ultimately, these boards serve as a canvas for self-expression, adapting not just to trends but also to individual journeys in style. Whether you’re looking for everyday outfits or special occasion looks, Pinterest offers a continually refreshing source of inspiration.
-            </p>
-            <h2>hallo 'stumes
-                <br>
-                <img width="500" height="400" src="/imgs/hallostumes.png">
-                <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;700&display=swap" rel="stylesheet">
-            <p>
-            Halloween costume Pinterest boards are essential for staying ahead of trends and sparking creativity. They serve as a visual treasure trove, offering a diverse range of ideas that cater to various styles, themes, and budgets. Users can easily curate their favorite looks, share inspiration with friends, and even discover DIY tips to make unique costumes. With a focus on aesthetics and originality, these boards transform Halloween planning into a fun, interactive experience that ensures you stand out at any celebration!
-            </p>
-        </section>   
-    <div>
-</body>
-
+    <header class="main-header">
+        <div class="back-to-home"><a href="/entries/index.html">BACK TO HOME</a></div>
+        <h1 class="main-title">Click and Explore!</h1>
+    </header>
+    <div class="pin_container">
+        <div class="card card_small" onclick="toggleFavorite(this)" data-favorite="false" style="--image-url: url('image1.jpg');"></div>
+        <div class="card card_medium" onclick="toggleFavorite(this)" data-favorite="false" style="--image-url: url('image2.jpg');"></div>
+        <div class="card card_large" onclick="toggleFavorite(this)" data-favorite="false" style="--image-url: url('image3.jpg');"></div>
+        <div class="card card_small" onclick="toggleFavorite(this)" data-favorite="false" style="--image-url: url('image4.jpg');"></div>
+        <div class="card card_medium" onclick="toggleFavorite(this)" data-favorite="false" style="--image-url: url('image5.jpg');"></div>
+        <div class="card card_small" onclick="toggleFavorite(this)" data-favorite="false" style="--image-url: url('image6.jpg');"></div>
+        <div class="card card_medium" onclick="toggleFavorite(this)" data-favorite="false" style="--image-url: url('image7.jpg');"></div>
+        <div class="card card_large" onclick="toggleFavorite(this)" data-favorite="false" style="--image-url: url('image8.jpg');"></div>
+        <div class="card card_small" onclick="toggleFavorite(this)" data-favorite="false" style="--image-url: url('image9.jpg');"></div>
+        <div class="card card_large" onclick="toggleFavorite(this)" data-favorite="false" style="--image-url: url('image10.jpg');"></div>
+        <div class="card card_small" onclick="toggleFavorite(this)" data-favorite="false" style="--image-url: url('image11.jpg');"></div>
+        <div class="card card_medium" onclick="toggleFavorite(this)" data-favorite="false" style="--image-url: url('image12.jpg');"></div>
+        <div class="card card_large" onclick="toggleFavorite(this)" data-favorite="false" style="--image-url: url('image13.jpg');"></div>
+        <div class="card card_medium" onclick="toggleFavorite(this)" data-favorite="false" style="--image-url: url('image14.jpg');"></div>
+        <div class="card card_large" onclick="toggleFavorite(this)" data-favorite="false" style="--image-url: url('image15.jpg');"></div>
+    </div>
 
     
-  
+</body>
+</html>

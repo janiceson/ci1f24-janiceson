@@ -1,12 +1,21 @@
+@font-face {
+    font-family: "BebasNeue"; /* Custom font */
+    src: url("/fonts/BebasNeue-Regular.ttf") format("woff2");
+}
 /* Reset and basic styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+a {
+    color:  #ff4d4d;
+    font-weight: 500;
+    font-size: 50px;
+  }
 
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "BebasNeue";
     background-image: url("fadedblack.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -16,8 +25,11 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 40px;
+    background-color: #1a1a1a;
 }
-
+li {
+    font-size: 100px;
+}
 /* Header styling */
 header {
     text-align: center;
