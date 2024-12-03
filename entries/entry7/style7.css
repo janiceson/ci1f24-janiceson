@@ -14,6 +14,36 @@ body {
     align-items: center;
     position: relative;
 }
+.stacked-elements {
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: left; /* Center align the elements */
+    text-align: left; /* Ensure text alignment */
+    margin: 20px auto; /* Add some spacing and center the container */
+}
+
+.stacked-elements h1 {
+    font-size: 2.5rem;
+    margin-left: 5%;
+    margin: 10px 0; /* Add spacing between h1 and a */
+    font-family: "BebasNeue"; /* Maintain font styling */
+}
+
+.stacked-elements a {
+    font-size: 1.5rem;
+    color: #525252; /* Match your theme colors */
+    text-decoration: none; /* Remove underline */
+    font-family: "BebasNeue";
+    text-align: left;
+    margin-top: 10px; /* Add spacing above link */
+}
+
+.stacked-elements a:hover {
+    text-decoration: underline; /* Add hover effect */
+    color: #bdbdbd; /* Slightly darker color on hover */
+}
+
 h1 {
     color: rgb(143, 143, 143);
     font-family: "BebasNeue";
