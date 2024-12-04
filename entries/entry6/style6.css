@@ -1,9 +1,8 @@
 /* General body styling */
 @font-face {
     font-family: "BebasNeue"; /* Custom font */
-    src: url("/fonts/BebasNeue-Regular.ttf") format("woff2");
+    src: url("BebasNeue-Regular.ttf") format("woff2");
 }
-
 body {
     font-family: Arial, sans-serif;
     background-color: #fff3c0;

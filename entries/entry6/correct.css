@@ -1,7 +1,7 @@
 /* General body styling */
 @font-face {
-    font-family: "BebasNeue"; /* This is an arbitrary name -- */
-    src: url("/fonts/BebasNeue-Regular.ttf") format("woff2");
+    font-family: "BebasNeue"; /* Custom font */
+    src: url("BebasNeue-Regular.ttf") format("woff2");
 }
 body {
     font-family: Arial, sans-serif;

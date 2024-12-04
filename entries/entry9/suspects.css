@@ -1,6 +1,6 @@
 @font-face {
     font-family: "BebasNeue"; /* Custom font */
-    src: url("/fonts/BebasNeue-Regular.ttf") format("woff2");
+    src: url("BebasNeue-Regular.ttf") format("woff2");
 }
 /* Import shared styling for base look and feel */
 @import url('style9.css');
