@@ -1,0 +1,157 @@
+/* General Styling */
+@font-face {
+    font-family: "BebasNeue"; /* Custom font */
+    src: url("BebasNeue-Regular.ttf") format("woff2");
+  }
+
+a{
+    color: rgb(171, 203, 255);
+    margin: -4vh;
+}
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #6daeff, #ffffff); /* Updated Gradient */
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    height: 90vh;
+    font-family: "BebasNeue";
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Header */
+header h1 {
+    font-size: 4rem;
+    color: rgb(213, 229, 255);
+    font-family: "BebasNeue";
+    margin-bottom: 10px;
+    text-shadow: 0 2px 5px rgba(0, 5, 105, 0.5);
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #c98f2b;
+    font-family: "BebasNeue";
+    margin-bottom: 20px;
+}
+
+/* Input Section */
+.new-post {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    color: #c98f2b;;
+}
+
+textarea {
+    width: 90%;
+    height: 80px;
+    border: 2px solid #c98f2b;
+    font-family: "BebasNeue";
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    color: #c98f2b;
+    resize: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #c98f2b;
+    box-shadow: 0 0 8px #c98f2b;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: #c98f2b;
+    font-family: "BebasNeue";
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background: #ae6e00;
+    transform: scale(1.05);
+}
+
+/* Discussion Area */
+.discussion-area {
+    margin-top: 20px;
+    width: 100%;
+    height: 40vh;
+    background: #d1e3ff7f;
+    border: 2px dashed #c98f2b;
+    border-radius: 10px;
+    font-family: "BebasNeue";
+    overflow: hidden;
+    position: relative;
+}
+
+/* Post Styling */
+.post {
+    position: absolute;
+    min-width: 150px;
+    max-width: 200px;
+    padding: 10px;
+    background: #ffefef;
+    border: 2px solid #c98f2b;
+    border-radius: 10px;
+    color: #c98f2b;
+    text-align: center;
+    cursor: grab;
+    font-size: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.post:active {
+    cursor: grabbing;
+    transform: scale(1.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .textarea {
+        width: 100%;
+    }
+
+    .post {
+        min-width: 120px;
+        max-width: 180px;
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}

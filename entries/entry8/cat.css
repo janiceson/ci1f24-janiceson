@@ -186,10 +186,12 @@ p {
         max-width: 90%; /* Adjust for smaller screens */
     }
     .scattered-cat {
-        width: 150px!; /* Smaller cats for smaller screens */
+        width: 100px !important; /* Make cats smaller for small screens */
+        animation: shake 0.7s infinite ease-in-out; /* Adjust animation speed */
     }
 }
 
+/* Media Query for Larger Screens */
 /* Media Query for Larger Screens */
 @media (min-width: 1200px) {
     .crazy-title {
@@ -200,6 +202,7 @@ p {
         max-width: 600px; /* Wider text blocks for larger screens */
     }
     .scattered-cat {
-        width: 200px; /* Larger cats for larger screens */
+        width: 300px !important; /* Larger cats for larger screens */
     }
 }
+

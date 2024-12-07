@@ -2,13 +2,20 @@
     font-family: "BebasNeue"; /* Custom font */
     src: url("BebasNeue-Regular.ttf") format("woff2");
 }
+@font-face {
+    font-family: 'GhastlyPanic';
+    src: url('GhastlyPanic.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /* Base styling */
 body {
     background-color: black;
     margin: 0;
+    width: 100vw;
     height: 100vh;
     overflow: hidden;
-    font-family: "BebasNeue";
+    font-family: "GhastlyPanic";
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,14 +34,14 @@ body {
     font-size: 2.5rem;
     margin-left: 5%;
     margin: 10px 0; /* Add spacing between h1 and a */
-    font-family: "BebasNeue"; /* Maintain font styling */
+    
 }
 
 .stacked-elements a {
     font-size: 1.5rem;
     color: #525252; /* Match your theme colors */
     text-decoration: none; /* Remove underline */
-    font-family: "BebasNeue";
+    
     text-align: left;
     margin-top: 10px; /* Add spacing above link */
 }
@@ -46,8 +53,12 @@ body {
 
 h1 {
     color: rgb(143, 143, 143);
-    font-family: "BebasNeue";
-    margin: 30px;
+    font-family: 'GhastlyPanic';
+
+    margin: 10px;
+}
+h2{
+    color: rgb(124, 124, 124);
 }
 /* Flexbox container styling */
 .horror-container {

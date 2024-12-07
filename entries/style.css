@@ -1,91 +1,174 @@
-/* styles.css */
 @font-face {
     font-family: "BebasNeue"; /* Custom font */
     src: url("BebasNeue-Regular.ttf") format("woff2");
 }
-.content-container {
+
+.inline {
+    display: flex;
+    text-shadow: 1px 1px 1px #00000098;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: auto;
+    margin-bottom: 0;
+    cursor: none;
 }
 body {
     margin: 0;
-    background-color: #f9cdff;
+    height: 100vh;
+    cursor: none; /* Hides the default cursor */
+}
+.custom-cursor {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: url('love-png-5.png') no-repeat center center;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 9999;
+}
+a{
     color: #000;
-    font-family: "BebasNeue"
+}
+.about {
+    margin-top: 5vh; /* Top margin for vertical spacing */
+    margin-left: 2vw;
+    font-size: 2rem;
+    text-align: left;
+    color: #000;
+    font-family: "BebasNeue";
+    cursor: none;
+    margin-bottom: 0; /* Remove extra spacing below the text */
 }
 
-.poster {
-    position: relative;
-    width: auto;
-    height: auto;
-    padding: 20px;
+.start {
+    margin-top: 5vh; /* Top margin for vertical spacing */
+    margin-right: 2vw;
+    cursor: none;
+    font-size: 2rem;
+    color: #000;
+    font-family: "BebasNeue";
+    text-align: right;
+    margin-bottom: 0; /* Remove extra spacing below the text */
+}
+
+hr {
+    height: 3px; /* Adjust thickness */
+    cursor: none;
+    border: none; /* Remove default borders */
+    background-color: #000; /* Set the line color */
+    width: 100%; /* Ensure the line spans the full width */
+    margin: 0; /* Remove default vertical margins */
+    margin-top: 1vh; /* Add a small gap above the line */
+}
+
+h1{
+    width: 40vh;
+    cursor: none;
+    font-size: 3.5rem;
+    margin-left: 34vw;
+    margin-top: 3vh;
+    line-height: 7vh;
+    text-shadow:2px 2px 2px #00000098;
+}
+
+
+
+body {
+    margin: 0;
+    background-color: #ffffff;
+    color: #000;
+    font-family: "BebasNeue";
     overflow: visible;
+    cursor: none;
 }
 
+.img1 {top: -33vh; left: 13vw;}
 .img1 {
-    width: 120px;  /* Vertical position */
-    height: 120px; /* Horizontal position */
+    width: auto;  /* 120px */
+    height: 17vh; /* 120px */
+    cursor: none;
 }
 
+.img2 {top: -23.5vh; left: 19.5vw;}
 .img2 {
-    width: 550px;  /* Vertical position */
-    height: 300px; /* Horizontal position */
+    width: auto; /* 550px */
+    height: 40vh; /* 300px */
+    cursor: none;
 }
 
 .img3 {
-    width: 550px;  /* Vertical position */
-    height: 300px; /* Horizontal position */
+    width: 28.65vw; /* 550px */
+    height: 27.78vh; /* 300px */
+    cursor: none;
 }
 
+.img4 {top: 13.5vh; left: 75.5vw;}
 .img4 {
-    width: 420px;  /* Vertical position */
-    height: 310px; /* Horizontal position */
+    width: auto; /* 420px */
+    height: 36.5vh; /* 310px */
+    cursor: none;
+   rotate: 270deg;
 }
 
+.img5 {top: -33vh; left: 1vw;}
 .img5 {
-    width: 230px;  /* Vertical position */
-    height: 220px; /* Horizontal position */
-    border-radius: 13px;
+    width: auto;  /* 230px */
+    cursor: none;
+    height: 40vh; /* 220px */
+    border-radius: 0.68vw; /* 13px */
 }
 
+.img6 {top: 3.5vh; left: 35vw;}
 .img6 {
-    width: 600px;  /* Vertical position */
-    height: 380px; /* Horizontal position */
+    width: 50vw;  /* 600px */
+    height: 50vh; /* 380px */
+    cursor: none;
+    z-index: 5;
 }
 
+.img7 {top: -16.5vh; left: 49vw;}
 .img7 {
-    width: 460px;  /* Vertical position */
-    height: 310px; /* Horizontal position */
-    rotate: 270deg;
-}
-
-.img8 {
-    width: 180px;  /* Vertical position */
-    height: 180px; /* Horizontal position */
-    border-radius: 5px;
-}
-
-.img9 {
-    width: 110px;  /* Vertical position */
-    height: 110px; /* Horizontal position */
-    border-radius: 5px;
-}
-
-.img10 {
-    width: 340px;  /* Vertical position */
-    height: 240px; /* Horizontal position */
-    rotate: 270deg;
-}
-
-.img11 {
-    width: 240px;  /* Vertical position */
-    height: 175px; /* Horizontal position */
+    width: auto;  /* 460px */
+    cursor: none;
+    height: 19vh; /* 310px */
     border-radius: 10px;
-    rotate: 90deg;
+}
+
+.img8 {top: 27vh; left: 1vw;}
+.img8 {
+    width: auto;  /* 180px */
+    cursor: none;
+    height: 24vh; /* 180px */
+    border-radius: 0.5vw; /* 5px */
+    z-index: 5;
+}
+
+.img9 {top: 6vh; left: 1vw;} 
+.img9 {
+    width: auto;  /* 110px */
+    cursor: none;
+    height: 21vh; /* 110px */
+    border-radius: 0.26vw; /* 5px */
+}
+
+.img10 {top: -19vh; left: 13vw;}
+.img10 {
+    width: auto;  /* 340px */
+    cursor: none;
+    height: 72vh; /* 240px */
+}
+
+.img11 {top: -33vh; left: 68.5vw;}
+.img11 {
+    width: auto;  /* 240px */
+    height: 41vh; /* 175px */
+    cursor: none;
+    border-radius: 2vw; /* 10px */
 }
 
 /* Highlight effect for corresponding text */
 .content h3 a {
+    cursor: none;
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
 }
 
@@ -94,84 +177,37 @@ body {
     color: black; /* Change text color for visibility */
 }
 
-
 .images {
     position: relative;
+    cursor: none;
+    margin-top: 18vh;
 }
 
 .images img {
     position: absolute;
+    cursor: none;
     border: none;
     transition: transform 0.3s ease;
 }
 
-
 .images img {
     position: absolute;
     border: none;
-
 }
 
 /* Image-specific styling for varying sizes and positions */
-.img1 {top: 0px; left: 625px; }
-.img2 {top: 415px; left: -157px; }
-.img3 {top: 0px; left: 0px; }
-.img4 {top: 360px; left: 210px; }
-.img5 {top: 220px; left: 890px; }
-.img6 {top: 287px; left: 580px; }
-.img7 {top: 245px; left: 975px; }
-.img8 {top: 120px; left: 540px; }
-.img9 {top: 0px; left: 525px; }
-.img10 {top: -10px; left: 1045px; }
-.img11 {top: 25px; left: 873px; }
+     /* 0px, 625px */
+ /* 415px, -157px */
+.img3 {top: 0vh; left: 0vw;}         /* 0px, 0px */
+/* 360px, 210px */
+ /* 220px, 890px */
+ /* 287px, 580px */
+ /* 245px, 975px */
+ /* 120px, 540px */
+    /* 0px, 525px */
+ /* -10px, 1045px */
+ /* 25px, 873px */
 
-.content{    
-    margin-top: -445px;
-    left: 745px;
-    position: relative;
-    text-align: left;
-     /* Ensures text is above images */
-}
-/* Text section styling */
-.text {
-    margin-top: 310px;
-    left: 30px;
-    position: relative;
-    text-align: left;
-     /* Ensures text is above images */
-}
 
-.text h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: rgb(0, 0, 169);
-    margin: 0;
-    text-transform: uppercase;
-}
 
-.text h2 {
-    font-size: 2rem;
-    color: rgb(120, 0, 172);
-    margin: 0px 0;
-}
-
-.text p {
-    color: rgb(181, 0, 162);
-    font-size: 1rem;
-    margin: 5px 0;
-}
-
-.text a {
-    color: rgb(181, 0, 162);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Content Section */
-.content {
-    margin-top: -445px;
-    left: 745px;
-    position: relative;
-    text-align: left;
-}
 

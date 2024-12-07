@@ -1,109 +1,107 @@
 @font-face {
   font-family: "BebasNeue"; /* Custom font */
-  src: url("/fonts/BebasNeue-Regular.ttf") format("woff2");
+  src: url("BebasNeue-Regular.ttf") format("woff2");
+}
+.inline {
+  display: flex; /* Use flexbox for layout */
+  text-shadow:1px 1px 1px #00000098;
+  justify-content: space-between; /* Push items to opposite ends */
+  align-items: center; /* Align items vertically in the center */
+  width: 100%; /* Ensure full-width alignment */
+  margin-bottom: 0; /* Remove space below the container */
 }
 
-body {
-  background-color:  black;
+a{
+  color: #000;
 }
-
-section {
-  display:  flex;
-  flex-direction:  column;
-  justify-content: center;
-  align-items:  center;
-  height:  100vh;
-}
-
-.button {
-  padding: 20px 50px;
-  border-radius: 30px;
-  background-color:  white;
-  color:  black;
-  font-size:  40px;
+.about {
+  margin-top: 5vh; /* Top margin for vertical spacing */
+  margin-left: 2vw;
+  font-size: 2rem;
+  text-align: left;
+  color: #000;
   font-family: "BebasNeue";
-  text-align:  center;
-  text-align:  center;
-  transition:  all 100ms;
+  margin-bottom: 0; /* Remove extra spacing below the text */
 }
 
-.button:hover {
-  background-color: #625c55;
-  cursor:  pointer;
+.start {
+  margin-top: 5vh; /* Top margin for vertical spacing */
+  margin-right: 2vw;
+  font-size: 2rem;
+  color: #000;
+  font-family: "BebasNeue";
+  text-align: right;
+  margin-bottom: 0; /* Remove extra spacing below the text */
 }
 
-.buttonOn {
-  background-color:  black;
-  color:  white;
-  
+hr {
+  height: 3px; /* Adjust thickness */
+  border: none; /* Remove default borders */
+  background-color: #000; /* Set the line color */
+  width: 100%; /* Ensure the line spans the full width */
+  margin: 0; /* Remove default vertical margins */
+  margin-top: 1vh; /* Add a small gap above the line */
+}
+
+h1{
+  width: 40vh;
+  font-size: 3.5rem;
+  margin-left: 34vw;
+  margin-top: 3vh;
+  line-height: 7vh;
+  text-shadow:2px 2px 2px #00000098;
+}
+
+h2{
+  background-color: #ffffff;
+  color: #000;
+  font-size: 3.5rem;
+  text-align: center;
+  margin-left: 5vw;
+  max-width: 90%;
+  font-size: a;
   font-family: "BebasNeue";
 }
 
-.light {
-  background-image: url("bleak.jpg");
-  background-size: cover; /* Ensures the image covers the entire viewport */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents tiling of the image */
-  height: 100vh; /* Sets the height to cover the entire viewport */
-  width: 100%; /* Ensures the width covers the full page */
+.bodytext1 {
+  margin: 0;
+  background-color: #ffffff;
+  color: #000;
+  font-family: "BebasNeue";
+  overflow: visible;
+  font-size: 27px;
+  width: 35vw;;
+   /* Limit the paragraph width */
+  margin: 0 auto; /* Center the paragraph */
+  line-height: 1.6; /* Improve readability */
+  padding: 10px; /* Optional padding for better spacing */
+  line-height: 5vh;
 }
+
+.bodytext2{
   
-  /* Media Query for smaller devices (max-width: 480px) */
-  @media (max-width: 480px) {
-    body {
-      flex-direction: column;
-      padding: 10px;
-    }
-  
-    h1 {
-      font-size: 1.5rem;
-    }
-  
-    p {
-      font-size: 1rem;
-    }
-  
-    textarea {
-      font-size: 0.9rem;
-      height: 60px;
-    }
-  
-    button {
-      font-size: 0.9rem;
-      padding: 8px 16px;
-    }
-  
-    .hiddenMessage {
-      font-size: 1.2rem;
-    }
+    margin: 0;
+    background-color: #ffffff;
+    color: #000;
+    font-family: "BebasNeue";
+    overflow: visible;
+    font-size: 27px;
+    width: 35vw; /* Limit the paragraph width */
+    margin: 0 auto; /* Center the paragraph */
+    line-height: 1.6; /* Improve readability */
+    padding: 10px; /* Optional padding for better spacing */
+    line-height: 5vh;
+}
+
+@media (max-width: 600px) {
+  .bodytext1 {
+    width: 200vw; /* Adjust width for smaller screens */
+    max-width: 80%;
   }
-  
-  /* Media Query for larger devices (min-width: 1024px) */
-  @media (min-width: 1024px) {
-    .container {
-      max-width: 800px;
-    }
-  
-    h1 {
-      font-size: 2.5rem;
-    }
-  
-    p {
-      font-size: 1.4rem;
-    }
-  
-    textarea {
-      font-size: 1.2rem;
-      height: 100px;
-    }
-  
-    button {
-      font-size: 1.2rem;
-      padding: 12px 24px;
-    }
-  
-    .hiddenMessage {
-      font-size: 1.8rem;
-    }
+  .bodytext2 {
+    width: 200vw; /* Adjust width for smaller screens */
+    max-width: 80%;
   }
-  
+}
+
+

@@ -2,6 +2,13 @@
     font-family: "BebasNeue"; /* Custom font */
     src: url("BebasNeue-Regular.ttf") format("woff2");
 }
+@font-face {
+    font-family: 'GhastlyPanice';
+    src: url('GhastlyPanic.ttf') format('woff2'),
+         url('GhastlyPanic.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 .back-button {
     display: inline-block;
     padding: 10px 20px;
@@ -15,7 +22,7 @@
 }
 a {
     color: rgb(115, 115, 115);
-    font-family: "BebasNeue";
+    font-family: 'GhastlyPanice';
     font-size: 30px;
     margin: 30px;
 }

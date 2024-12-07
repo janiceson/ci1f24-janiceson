@@ -1,54 +1,327 @@
-body {
-    background-image: url("/imgs/pinkgingham.jpg");
-    padding: 50px;
-    text-align: center;
-    color: #ffffff;
+@font-face {
+    font-family: "BebasNeue"; /* Custom font */
+    src: url("BebasNeue-Regular.ttf") format("woff2");
 }
-h2{
-    text-align: center;
-    color: #ff65ad;
-    padding: 50px;
-    font-size: 40px;
-    margin-top: 0;
-    padding-top: 0;
-    font-weight: 2000;
-    font-style: italic;
-    font-family: Arial, Helvetica, sans-serif
-}
-  
-
-h1{
-    text-align: center;
-    color: #cf7a18;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 60px;
-    margin-left: 0px;
-    margin-top: 0px;
-    font-style: italic;
-    font-stretch: expanded;
-    border-radius: 0%;
+body{
+    background-color: #000000;
     
 }
-h4{
-    color: #1a2891;
+.container{
+    display: flex;
+    overflow: hidden; /* Ensure no overflow occurs */
+}
+.flex-container {
+    flex-direction: column;
+  }
+.hover {
+    padding: px;
+    display: none;
+}
+.main{
+    display: flex;
+    align-items: center;
+    width: 600px;
+    text-wrap: wrap;
+}
+    
+ span:hover + div {
+    display: block;
+}
+
+.tc-container{
+    width: 500px;
+    height: auto;
+    position: relative;
+}
+
+a {
+    color:#ffbaea;
+    font-size: 30px;
+    text-shadow: #ffbaea;
+
+}
+
+.tc-container img{
+    width: 100%;
+    height: auto;
+}
+
+.top-img{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+}
+
+.top-img:hover {
+    opacity: 1;
+}
+    /* second image*/
+
+.ab-container{
+    width: 500px;
+    height: auto;
+    position: relative;
+}
+.ab-container img{
+    width: 100%;
+    height: auto;
+}
+
+.top-img{
+    position:absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    
+}
+
+.top-img:hover{
+    opacity: 1;
+}
+.cd-container{
+    width: 500px;
+    height: auto;
+    position: relative;
+}
+.cd-container img{
+    width: 100%;
+    height: auto;
+}
+
+.top-img{
+    position:absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    
+}
+
+.top-img:hover{
+    opacity: 1;
+}
+
+@keyframes scroll-down {
+    0% {
+        transform: translateY(-100%); /* Start above the view */
+    }
+    100% {
+        transform: translateY(100%); /* Move below the view */
+    }
+}
+
+h1 {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 270px;
+    white-space: nowrap;
+    text-align: right;
+    padding-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    color: #ffbaea;
+    text-shadow: 10px 10px 10px rgba(126, 95, 68, 0.672);
+    font-family: "BebasNeue";
+    position: absolute; /* Allows precise positioning */
+    top: 0; /* Start from the top */
+    right: 0; /* Align to the right */
+    animation: scroll-down 5s linear infinite; /* Apply scrolling animation */
+    overflow: hidden;
+    animation: scroll-down 5s linear infinite; /* Apply scrolling animation */
+}
+
+h1:hover {
+    animation-play-state: paused;
+}
+
+h1:hover, img:hover {
+     background-color: rgba(140, 0, 234, 0.536);
+    }
+
+h2 {
+    
+    z-index: 2; /* Ensure it's above the scrolling text */
+}
+.lana{
+    color: rgba(126, 95, 68, 0.672);
+    margin-top: -100px;
+    font-size: 100px;
+    text-align: left;
+    text-shadow: 5px 5px 5px #ffbaea;
+    font-family: "BebasNeue"
+}
+.del{ 
+    color: rgba(126, 95, 68, 0.672);
+    margin-top: -200px;
+    font-size: 100px;
+    text-align: left;
+    text-shadow: 5px 5px 5px #ffbaea;
+    font-family: "BebasNeue"
+}
+.rey{ 
+    color: rgba(126, 95, 68, 0.672);
+    margin-top: -200px;
+    font-size: 100px;
+    text-align: left;
+    text-shadow: 5px 5px 5px #ffbaea;
+    font-family: "BebasNeue"
+}
+
+
+h2:hover{
+     background-color: rgba(129, 99, 73, 0.536);
+    }
+body {
+    background-image: url("czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGRmZW1pbmluZTEtMjBiLW5hcC5qcGc.webp"); /* Your background image */
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-repeat: no-repeat; /* Prevents tiling of the background image */
+    background-position: center; /* Center the background image */
+    padding: 50px;
+    background-color: #ffbaea;
+    text-align: center;
+    color: #ffbaea;;
+    margin-left: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-family: "BebasNeue"
+    
+}
+
+p {
+    color: rgb(88, 69, 48); /* Paragraph text color */
+    text-align: left; /* Align text to the left */
+    font-size: 30px; /* Default font size */
+    margin-top: -40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Font family */
+    font-weight: lighter; /* Set font weight */
+    text-shadow: 2px 2px 4px #000000; /* Optional: Add text shadow */
+    word-wrap: break-word; /* Force long words to break to the next line */
+    white-space: normal; /* Prevent text from staying on one line */
+    line-height: 1.6; /* Add spacing between lines */
+    max-width: 75%; /* Ensure the text fits within the container */
+    overflow-wrap: anywhere; /* Breaks long words at any point */
+}
+
+img{
+    border: 10px solid #ffbaea;
+    margin: 5px;
+    width: 300px;
+    height: auto;
+}
+
+/* General styling for progress bars */
+.progress {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    border: 10px rgba(121, 88, 60, 0.63);;
+    margin-top: 10px;
+}
+
+progress {
+    width: 700px;
+    height: 15px;
+    background-color: rgba(121, 88, 60, 0.63);
+    border: 1px rgba(121, 88, 60, 0.63);;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+progress::-webkit-progress-bar {
+    background-color: rgba(126, 95, 68, 0.565);
+}
+
+progress::-webkit-progress-value {
+    background-color: #ffdef5;
+    transition: width 0.3s ease-in-out;
+}
+
+progress::-moz-progress-bar {
+    background-color: #56ffee;
+}
+
+label {
+    color: rgba(121, 88, 60, 0.63);;
     font-size: 30px;
 }
-p{
-    text-align: left;
-    color: #9e5082;
-    font-size: 20px;
-    
+
+/* Default styles (for larger screens) */
+
+body {
+    background-color: #000;
 }
-h1:hover{
-    background-color: rgb(255, 249, 241);
-    image-rendering: pixelated;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-h2:hover{
-    background-color: rgb(255, 199, 238);
-    image-rendering: pixelated;
-  }
-h3{
-    text-align: left;
-    text-decoration: #9e5082;
+
+/* General styling for progress bars */
+.progress {
+    display: flex;
+    flex-direction: column; /* Stack labels and progress bars vertically */
+    align-items: flex-start; /* Align them to the left */
+    justify-content: flex-start; /* Align content to the top */
+    gap: 10px; /* Add slight spacing between labels and progress bars */
+    margin-top: -130px; /* Adjust vertical positioning */
+    margin-left: 0; /* Align content to the left */
+    padding: 0; /* Remove unnecessary padding */
+    border-radius: 15px; /* Add rounded corners to the overall container */
 }
+
+/* Media Query: For tablets (768px and below) */
+@media (max-width: 768px) {
+    .progress {
+        width: 90%; /* Reduce width for smaller screens */
+        margin-left: 10px; /* Add slight padding for alignment */
+        margin-top: -100px; /* Adjust vertical positioning */
+    }
+
+    progress {
+        width: 90%; /* Adjust progress bar width */
+        height: 12px; /* Slightly reduce height */
+    }
+
+    p {
+        font-size: 18px; /* Reduce font size for better readability */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 100px; /* Further reduce font size for mobile */
+        transform: none; /* Remove rotation for better visibility */
+        white-space: normal; /* Allow text to wrap if needed */
+        position: static; /* Allow default flow position */
+        margin: 0 auto; /* Center align text */
+    }
+    body {
+        display: flex;
+        flex-direction: row; /* Set content to flow horizontally */
+        min-width: 100vw; /* Ensure the body width spans the viewport */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        overflow-y: hidden; /* Disable vertical scrolling */
+        height: 100vh; /* Match the viewport height */
+    }
+
+    .container {
+        display: block; /* Ensure child elements stack horizontally */
+        min-width: 100vw; /* Maintain full width for each child */
+    }
+
+    img {
+        max-width: 300px; /* Keep images responsive */
+        height: auto; /* Maintain aspect ratio */
+        margin-right: 20px; /* Add spacing between images */
+    }
+
+    .progress {
+        display: inline-block; /* Allow progress bars to align horizontally */
+        width: 100%; /* Ensure progress bars don't break layout */
+        margin-right: 20px; /* Spacing between progress sections */
+    }
+
+    p {
+        font-size: 16px; /* Adjust font size for readability */
+        text-align: left; /* Keep text left-aligned */
+        min-width: 100vw; /* Each paragraph spans the full width */
+        margin-right: 20px; /* Add spacing after paragraphs */
+    }
+}
+

@@ -1,30 +1,35 @@
 @font-face {
-    font-family: "BebasNeue"; /* Custom font */
+    font-family: "BebasNeue";
     src: url("BebasNeue-Regular.ttf") format("woff2");
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-.quiz p {
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    font-size: 20px;
-    cursor: pointer;
-    background-color: rgb(6, 92, 45);
-    border-radius: 0px;
+.back-to-main {
+    background-color: #ffffffe1;
+    border-radius: 8px;
+    padding: 6px 10px;
+    color: #ffffff; 
+    display: block;
+    text-decoration: none;
+    color: #57c4ff;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
     font-family: "BebasNeue";
-    color: rgb(168, 224, 255);
+    position: absolute; /* Positioned relative to the viewport */
+    top: 10px; /* Space from the top of the page */
+    left: 10px; /* Space from the left side */
+    z-index: 1000; /* High enough to be above other elements */
+    transition: color 0.3s;
 }
 
+.back-to-main:hover {
+    color: #525252;
+}
 
 body {
     display: flex;
@@ -33,125 +38,100 @@ body {
     height: 100vh;
     background-color: #FFF8E1;
     margin: 0;
-    overflow: hidden; /* Hide any overflow from the body */
+    overflow: hidden;
 }
 
 .garden-container {
     position: relative;
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Crop elements that move outside of the container */
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .garden-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the image covers the container */
-    display: block;
+    object-fit: cover;
 }
 
 .icon {
     position: absolute;
-    width: 150px; /* Size relative to viewport width */
+    width: 150px;
     height: 150px;
     transition: transform 0.3s;
 }
 
 .icon:hover {
-    transform: scale(1.5); /* Magnify the icon on hover */
+    transform: scale(1.5);
 }
-        
-        /* Example positions for the icons */
-        .icon1 { top: 30%; left: 30%; }
-        .icon2 { top: 30%; left: 60%; }
-        .icon3 { top: 30%; left: 50%; }
-        .icon4 { top: 45%; left: 20%; }
-        .icon5 { top: 25%; left: 18%; }
-        .icon6 { top: 62%; left: 72%; }
-        .icon7 { top: 16%; left: 56%; }
-        .icon8 { top: 60%; left: 16%; }
-        .icon9 { top: 32%; left: 6%; }
-        .icon10 { top: 40%; left: 1%; }
-        .icon11 { top: 42%; left: 58%; }
-        .icon12 { top: 32%; left: 40%; }
-        .icon13 { top: 35%; left: 25%; }
-        .icon14 { top: 32%; left: 6%; }
-    
-/* Media Query for Smaller Screens (max-width: 600px) */
-/* Media Query for Smaller Screens (max-width: 600px) */
+
+/* Icon Positions */
+.icon1 { top: 30%; left: 30%; }
+.icon2 { top: 30%; left: 60%; }
+.icon3 { top: 30%; left: 50%; }
+.icon4 { top: 45%; left: 20%; }
+.icon5 { top: 25%; left: 18%; }
+.icon6 { top: 62%; left: 72%; }
+
+/* Keyframes for Shake */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+/* Media Query for Small Screens */
 @media (max-width: 600px) {
-    /* Keyframes for the vibrating animation */
-    @keyframes shake {
-        0%, 100% { transform: translateX(0); }
-        25% { transform: translateX(-5px); }
-        50% { transform: translateX(5px); }
-        75% { transform: translateX(-5px); }
-    }
-
     .icon {
-        width: 90px; /* Make icons smaller */
+        width: 90px;
         height: 90px;
-        animation: shake 0.2s infinite; /* Reduce the duration to 0.2s for a quicker shake */
-        transition: none; /* Remove the hover transition */
+        animation: shake 0.2s infinite;
     }
-
     .icon:hover {
-        transform: none; /* Disable the hover effect */
+        transform: scale(1.2);
     }
 
-    /* Adjusted positions for smaller screens */
     .icon1 { top: 35%; left: 80%; }
     .icon2 { top: 30%; left: 70%; }
     .icon3 { top: 30%; left: 55%; }
     .icon4 { top: 40%; left: 60%; }
     .icon5 { top: 16%; left: 70%; }
-
-    /* Hide extra icons on smaller screens */
     .icon6, .icon7, .icon8, .icon9, .icon10, .icon11, .icon12, .icon13, .icon14 {
         display: none;
     }
 
-    .garden-container {
-        width: 100%; /* Make the container full width */
+    body {
+        overflow: auto;
     }
 }
 
-        
-        /* Media Query for Medium-Sized Screens (600px to 1200px) */
+/* Media Query for Medium Screens */
 @media (min-width: 600px) and (max-width: 1100px) {
-     /* Keyframes for the vibrating animation */
-     @keyframes shake {
-        0%, 100% { transform: translateX(0); }
-        25% { transform: translateX(-5px); }
-        50% { transform: translateX(5px); }
-        75% { transform: translateX(-5px); }
-    }
-
     .icon {
-        width: 90px; /* Make icons smaller */
-        height: 90px;
-        animation: shake 0.2s infinite; /* Reduce the duration to 0.2s for a quicker shake */
-        transition: none; /* Remove the hover transition */
+        width: 140px;
+        height: 140px;
+        animation: shake 0.2s infinite;
     }
 
     .icon:hover {
-        transform: none; /* Disable the hover effect */
+        transform: scale(1.3);
     }
-    .icon {
-        width: 140px; /* Adjust icon size for tablets */
-        height: 140px;
-    }
+
     .icon1 { top: 28%; left: 35%; }
     .icon2 { top: 28%; left: 60%; }
     .icon3 { top: 28%; left: 50%; }
     .icon4 { top: 31%; left: 26%; }
     .icon5 { top: 25%; left: 18%; }
     .icon6 { top: 62%; left: 90%; }
-    /* Hide extra icons, showing only six on medium screens */
+
     .icon7, .icon8, .icon9, .icon10, .icon11, .icon12, .icon13, .icon14 {
         display: none;
     }
+
     .garden-container {
-        max-width: 1000px; /* Adjust the container width for tablets */
+        width: 90%;
+        max-width: 1000px;
+        margin: auto;
     }
 }

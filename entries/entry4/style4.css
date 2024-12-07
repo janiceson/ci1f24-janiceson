@@ -1,77 +1,146 @@
-
-/* 4 different states for the same link: unvisited, vistited, hoverand acitve */
-
-/* unvisited link  */
-
-.flex-container{
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-
+@font-face {
+  font-family: "BebasNeue"; /* Custom font */
+  src: url("BebasNeue-Regular.ttf") format("woff2");
+}
+/* Background scrolling text */
+.scrolling-text-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: none;
+  opacity: 0.1;
+  z-index: -1;
+  overflow: hidden;
+}
+progress {
+  width: 20vw;
+  height: 15px;
+  border: 2px solid rgba(255, 119, 0, 0.881);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: rgba(111, 111, 111, 0.635); /* Track background */
 }
 
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    width: 900px;
-    margin-top: 10px;
-  }
+/* Custom fill colors for each progress bar */
+progress#obsession::-webkit-progress-value {
+  background-color: rgba(255, 119, 0, 0.881); /* Pink for "Obsession" */
+}
 
+progress#longevity::-webkit-progress-value {
+  background-color: rgba(255, 119, 0, 0.881);/* Orange for "Longevity" */
+}
 
-  /* visited link */
-  a:visited {
-    color: green;
-  }
-  
-  /* selected link */
-  a:active {
-    color: yellow;
-  }
+progress#media-presence::-webkit-progress-value {
+  background-color: rgba(255, 119, 0, 0.881); /* Green for "Current Media Presence" */
+}
 
-  .hover {
-    background-color: rgb(205, 89, 0);
-    padding: 20px;
-    display: none;
+/* For Firefox */
+progress#obsession::-moz-progress-bar {
+  background-color: rgba(255, 119, 0, 0.881); /* Pink for "Obsession" */
+}
+
+progress#longevity::-moz-progress-bar {
+  background-color: rgba(255, 119, 0, 0.881); /* Orange for "Longevity" */
+}
+
+progress#media-presence::-moz-progress-bar {
+  background-color: rgba(255, 119, 0, 0.881); /* Green for "Current Media Presence" */
+}
+
+img{
+  height: auto;
+  width: 40vw;
+  margin: 10vh;
+}
+/* Individual scrolling text lines */
+.scrolling-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #7f7f7f;
+  white-space: nowrap;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Scroll left */
+.scrolling-text[data-direction="left"] {
+  animation-name: scrollLeft;
+}
+
+/* Scroll right */
+.scrolling-text[data-direction="right"] {
+  animation-name: scrollRight;
+}
+
+/* Keyframes for scrolling left */
+@keyframes scrollLeft {
+  0% {
+      transform: translateX(100%);
   }
-    
-  span:hover + div {
-    display: block;
+  100% {
+      transform: translateX(-100%);
   }
-h3:hover, img:hover {
-    background-color: rgb(205, 89, 0);
+}
+
+/* Keyframes for scrolling right */
+@keyframes scrollRight {
+  0% {
+      transform: translateX(-100%);
   }
-.dunphys{
-  margin-top: 200px;
-  margin-bottom: 200px;
-  line-height: 1500px;
+  100% {
+      transform: translateX(100%);
+  }
+}
+body {
+  background-color: rgb(255, 244, 230);
+  padding: 50px;
   text-align: center;
+  color: #616161;
+  font-family: "BebasNeue";
 }
 h2{
+  font-size: 30px;
+  font-family: "BebasNeue";
+  color: #213396;
+}
+h1{
   text-align: center;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 120PX;
+  color: #ff5a13;
+  font-size: 110px;
+  font-style: italic;
+}
+h4{
+  color: #ff9523;
+  font-size: 50px;
+}
+p {
+  text-align: left;
+  color: #525252;
+  font-size: 27px;
+  width: 35vw; /* Limit the paragraph width */
+  margin: 0 auto; /* Center the paragraph */
+  line-height: 1.6; /* Improve readability */
+  padding: 10px; /* Optional padding for better spacing */
+  line-height: 5vh;
+}
+a {
+  color: #ffcea6;
+  font-size: 25px;
 }
 
-h3{
-  font-size: 100px;
-}
-p:hover{
-  background-color: rgb(117, 189, 252);
-}
 
-h1{ 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 100px;
-    margin-top: 0px;
-    margin-left: 4px;
-}
-body{ 
-    background-color: rgb(246, 242, 233);
-}
-p{
-    font-size: larger;
+
+@media (min-width: 600px) {
+  body {
+      background-color: rgb(255, 247, 235);
+      width: 200vw; /* Adjust width for smaller screens */
+      max-width: 80%;
+  }
 }
 
